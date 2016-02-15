@@ -38,7 +38,7 @@
         <!-- /.navbar-collapse -->
     </div>
     <!-- /.container-fluid -->
-</nav>>
+</nav>
 <!-- Header -->
     <header>
         <div class="container">

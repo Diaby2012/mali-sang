@@ -1,4 +1,13 @@
-<?php include ("include/nav.php")?>
+<?php
+session_start();
+include_once ("include/nav.php");
+include_once ("include/connexion.php");
+
+$req = $bdd->prepare('SELECT nom_donneur, numero_mobile, type_contact, horaire_contact FROM users
+                  WHERE  ville = ? AND groupe_sanguin = ? ');
+$req->execute(array($_GET['ville'],$_GET['groupe_sanguin']));
+
+?>
 <header>
     <div class="container">
      <div class="row">
@@ -11,14 +20,13 @@
                     <td>Type de contact</td>
                     <td>Horaire de contact</td>
                 </tr>
-
-                    <?php for($i=0; $i<5; $i++)
+                    <?php while($donnees = $req->fetch())
                     {
                     ?>  <tr>
-                        <td>col1</td>
-                        <td>col2</td>
-                        <td>col3</td>
-                        <td>col4</td>
+                        <td><?php echo $donnees['nom_donneur']; ?></td>
+                        <td><?php echo $donnees['numero_mobile']; ?></td>
+                        <td><?php echo $donnees['type_contact']; ?></td>
+                        <td><?php echo $donnees['horaire_contact']; ?></td>
                         </tr>
                     <?php
                     }?>

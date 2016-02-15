@@ -1,4 +1,4 @@
-<?php include ("include/nav.php")?>
+<?php include_once ("include/nav.php")?>
 
     <!-- Header -->
     <header>
@@ -6,11 +6,11 @@
            <div class="row">
                 <h4>Chercher un Donneur</h4>
                 <hr>
-                <form class="row" method="POST" action="recherche.php">
+                <form class="row" method="GET" action="recherche.php">
                     <div class="col-lg-5 form-group">
                         <label>Ville</label>
-                        <select class="form-control" id="ville">
-                            <option>Bamako</option>
+                        <select class="form-control" name="ville">
+                            <option>bamako</option>
                             <option>Sikasso</option>
                             <option>Mopti</option>
                             <option>Koutiala</option>
@@ -26,7 +26,7 @@
                     </div>
                     <div class="col-lg-5 form-group">
                         <label>Groupe Sanguin</label>
-                        <select class="form-control" id="groupe_sanguin">
+                        <select class="form-control" name="groupe_sanguin">
                             <option>O-</option>
                             <option>O+</option>
                             <option>B-</option>
@@ -80,25 +80,25 @@
                 <div class="col-lg-12 text-center">
                     <h4>Inscription d'un nouveau donneur</h4>
                     <div class="row">
-                        <form class="col-lg-offset-3 col-lg-6 col-md-offset-3">
+                        <form  method="POST" action="inscription.php" class="col-lg-offset-3 col-lg-6 col-md-offset-3">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="name" placeholder="Nom donneur">
+                                <input type="text" class="form-control" name="nom_donneur" placeholder="Nom donneur">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" id="password" placeholder="Mot de passe">
+                                <input type="password" class="form-control" name="password" placeholder="Mot de passe">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" id="repeat_password" placeholder="Répéter mt de passe">
+                                <input type="password" class="form-control" name="repeat_password" placeholder="Répéter mt de passe">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="ville" placeholder="Ville">
+                                <input type="text" class="form-control" name="ville" placeholder="Ville">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="numero_mobile" placeholder="Numéro Mobile">
+                                <input type="text" class="form-control" name="numero_mobile" placeholder="Numéro Mobile">
                             </div>
                             <div class="form-group">
                                 <label for="groupe_sanguin">Groupe sanguin</label>
-                                <select class="form-control" id="groupe_sanguin">
+                                <select class="form-control" name="groupe_sanguin">
                                     <option>O-</option>
                                     <option>O+</option>
                                     <option>B-</option>
@@ -111,7 +111,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="groupe_sanguin">Type de contact</label>
-                                <select class="form-control" id="type_contact">
+                                <select class="form-control" name="type_contact">
                                     <option>SMS</option>
                                     <option>Apppel</option>
                                     <option>SMS-Appel</option>
@@ -119,13 +119,13 @@
                             </div>
                             <div class="form-group">
                                 <label for="groupe_sanguin">Horaire de Contact</label>
-                                <select class="form-control" id="horaire_conatc">
+                                <select class="form-control" name="horaire_contact">
                                     <option>24/24</option>
                                     <option>Entre 8h et 18h</option>
                                     <option>Entre 19h et 23h</option>
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-default">Inscription</button>
+                            <button type="submit" value='Inscription' class="btn btn-default">Inscription</button>
                         </form>
                     </div>
                 </div>
