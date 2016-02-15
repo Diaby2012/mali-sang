@@ -4,7 +4,7 @@
     <header>
         <div class="container">
            <div class="row">
-                <h4>Chercher un Donneur</h4>
+                <h4>Trouver un Donneur</h4>
                 <hr>
                 <form class="row" method="GET" action="recherche.php">
                     <div class="col-lg-5 form-group">
@@ -91,7 +91,20 @@
                                 <input type="password" class="form-control" name="repeat_password" placeholder="Répéter mt de passe">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="ville" placeholder="Ville">
+                                <select class="form-control" name="ville">
+                                    <option>bamako</option>
+                                    <option>Sikasso</option>
+                                    <option>Mopti</option>
+                                    <option>Koutiala</option>
+                                    <option>Kayes</option>
+                                    <option>Ségou</option>
+                                    <option>Nioro du Sahel</option>
+                                    <option>Gao</option>
+                                    <option>Tombouctou</option>
+                                    <option>Kati</option>
+                                    <option>ménaka</option>
+                                    <option>Niono</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control" name="numero_mobile" placeholder="Numéro Mobile">

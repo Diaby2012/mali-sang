@@ -16,11 +16,8 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-
 </head>
-
 <body id="page-top" class="index">
-
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -35,7 +32,6 @@
             <a class="navbar-brand" href="index.php">Mali-Sang</a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li class="hidden">
@@ -44,6 +40,15 @@
                 <li class="page-scroll">
                     <a href="#inscription">Inscription</a>
                 </li>
+                <?php
+                  if(isset($_SESSION['nom'])){
+                ?>
+                <li class="page-scroll">
+                    <a href="commentaire.php">Commentaire</a>
+                </li>
+                <?php
+                }
+                 ?>
                 <li class="page-scroll">
                     <a href="#contact">Contact</a>
                 </li>

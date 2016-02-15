@@ -77,7 +77,8 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background: linear-gradient(to bottom, green, rgba(0,255,0,0));
+    /*background: linear-gradient(to bottom, #404040, rgba(0,255,0,0));*/
+    background-color: #404040;
 }
 
 header .container {

@@ -1,6 +1,15 @@
 <?php
 session_start();
 include_once('include/connexion.php');
+function verifierPassword($password, $repeat_password)
+{
+
+}
+
+if($_POST['password']!= $_POST['repeat_password'])
+{
+    
+}
 $req = $bdd->prepare('INSERT INTO users(nom_donneur, password, ville, numero_mobile, groupe_sanguin, type_contact, horaire_contact)
                       VALUES(:nom_donneur, :password, :ville, :numero_mobile, :groupe_sanguin, :type_contact, :horaire_contact)');
 $req->execute(array(
