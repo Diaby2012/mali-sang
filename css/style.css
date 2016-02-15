@@ -1,0 +1,42 @@
+.navbar-default{
+    background-color: #cd2a19;
+}
+
+.img-responsive,
+.thumbnail>img,
+.thumbnail a>img,
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img{
+    width: 50px;
+    height: 50px;
+    margin-bottom: auto;
+}
+.row{
+    padding-bottom: 0px;
+}
+caption
+{
+    color: white;
+}
+header{
+    background-color: chartreuse;
+}
+
+table {
+    background-color: #cd2a19;
+    color: #1a242f;
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"]
+{
+    background-color: #b62516;
+    color: white;
+}
+
+a, a:hover, a:focus, a:active, a.active
+{
+    color: #d62c1a;
+}
+
+button .btn-default{
+    background-color: transparent;
+}
