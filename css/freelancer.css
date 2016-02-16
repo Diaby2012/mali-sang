@@ -17,7 +17,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #18bc9c;
+    color: #d62c1a;
 }
 
 h1,
@@ -76,9 +76,9 @@ hr.star-primary:after {
 
 header {
     text-align: center;
-    color: #fff;
+    color: #0d1318;
     /*background: linear-gradient(to bottom, #404040, rgba(0,255,0,0));*/
-    background-color: #404040;
+    background-color: #F0F0F0;
 }
 
 header .container {

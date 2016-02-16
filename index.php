@@ -1,5 +1,5 @@
 <?php include_once ("include/nav.php")?>
-
+<script type="text/javascript" src="js/general.js"></script>
     <!-- Header -->
     <header>
         <div class="container">
@@ -85,10 +85,16 @@
                                 <input type="text" class="form-control" name="nom_donneur" placeholder="Nom donneur">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" name="password" placeholder="Mot de passe">
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe">
+                                <span id="confirmMessage" class="confirmMessage"></span>
                             </div>
+                            <script>
+                                var pass1 = document.getElementById('password');
+                                var goodColor = "#66cc66";
+                                pass2.style.backgroundColor = goodColor;
+                            </script>
                             <div class="form-group">
-                                <input type="password" class="form-control" name="repeat_password" placeholder="Répéter mt de passe">
+                                <input type="password" class="form-control" name="repeat_password" id="repeat_password" alert("test") placeholder="Répéter mot de passe">
                             </div>
                             <div class="form-group">
                                 <select class="form-control" name="ville">

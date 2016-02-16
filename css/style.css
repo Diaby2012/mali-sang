@@ -1,5 +1,6 @@
 .navbar-default{
-    background: linear-gradient(to bottom, #300000, rgba(0,255,0,0));
+    /*background: linear-gradient(to bottom, #300000, rgba(0,255,0,0));*/
+    background-color: #2C3E50;
 }
 
 .img-responsive,
@@ -19,7 +20,7 @@ caption
     color: white;
 }
 header{
-    background-color: #808080;
+    background-color: #F0F0F0;
 }
 
 table {
@@ -44,4 +45,8 @@ button .btn-default{
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus
 {
     background-color: transparent;
+}
+
+.confirmMessage{
+    background-color: #0e6f5c;
 }
