@@ -81,7 +81,8 @@
                     <div class="row">
                         <form  method="POST" action="inscription.php" class="col-lg-offset-3 col-lg-6 col-md-offset-3">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="nom_donneur" id="nom_donneur" placeholder="Nom donneur">
+                                <span id="confirmNom" class="confirmNom"></span>
+                                <input type="text" class="form-control" name="nom_donneur" id="nom_donneur" onkeyup="checkNom(); return false;" placeholder="Nom donneur">
                             </div>
                             <div class="form-group">
                                 <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe">
@@ -107,7 +108,8 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="numero_mobile" id="numero_mobile" placeholder="Numéro Mobile">
+                                <span id="confirmNumero" class="confirmNumero"></span>
+                                <input type="text" class="form-control" name="numero_mobile" id="numero_mobile" onkeyup="checkNumero(); return false;" placeholder="Numéro Mobile">
                             </div>
                             <div class="form-group">
                                 <label for="groupe_sanguin">Groupe sanguin</label>
