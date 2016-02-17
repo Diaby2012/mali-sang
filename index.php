@@ -1,5 +1,4 @@
 <?php include_once ("include/nav.php")?>
-<script type="text/javascript" src="js/general.js"></script>
     <!-- Header -->
     <header>
         <div class="container">
@@ -82,19 +81,14 @@
                     <div class="row">
                         <form  method="POST" action="inscription.php" class="col-lg-offset-3 col-lg-6 col-md-offset-3">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="nom_donneur" placeholder="Nom donneur">
+                                <input type="text" class="form-control" name="nom_donneur" id="nom_donneur" placeholder="Nom donneur">
                             </div>
                             <div class="form-group">
                                 <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe">
                                 <span id="confirmMessage" class="confirmMessage"></span>
                             </div>
-                            <script>
-                                var pass1 = document.getElementById('password');
-                                var goodColor = "#66cc66";
-                                pass2.style.backgroundColor = goodColor;
-                            </script>
                             <div class="form-group">
-                                <input type="password" class="form-control" name="repeat_password" id="repeat_password" alert("test") placeholder="Répéter mot de passe">
+                                <input type="password" class="form-control" name="repeat_password" id="repeat_password" onkeyup="checkPass(); return false;" placeholder="Répéter mot de passe">
                             </div>
                             <div class="form-group">
                                 <select class="form-control" name="ville">
@@ -113,7 +107,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="numero_mobile" placeholder="Numéro Mobile">
+                                <input type="text" class="form-control" name="numero_mobile" id="numero_mobile" placeholder="Numéro Mobile">
                             </div>
                             <div class="form-group">
                                 <label for="groupe_sanguin">Groupe sanguin</label>
@@ -144,7 +138,7 @@
                                     <option>Entre 19h et 23h</option>
                                 </select>
                             </div>
-                            <button type="submit" value='Inscription' class="btn btn-default">Inscription</button>
+                            <button type="submit" value="Inscription" name="submit" class="btn btn-default">Inscription</button>
                         </form>
                     </div>
                 </div>

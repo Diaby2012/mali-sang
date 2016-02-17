@@ -16,11 +16,11 @@ include_once('include/connexion.php');
         return $res > 0;
     }
 
-  if(!VerifierNumero($_POST['numero_mobile'])){
+/*  if(!VerifierNumero($_POST['numero_mobile'])){
      echo "exixte pas";
   }else{
       echo "existe";
-  }
+  }*/
 
 
 /*if($_POST['password']!= $_POST['repeat_password'])
