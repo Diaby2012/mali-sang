@@ -8,27 +8,21 @@ include_once('include/connexion.php');
 
         if($res[0] == 0)
         {
-            echo "nexiste pas";
+                $req = $bdd->prepare('INSERT INTO users(nom_donneur, password, ville, numero_mobile, groupe_sanguin, type_contact, horaire_contact)
+                  VALUES(:nom_donneur, :password, :ville, :numero_mobile, :groupe_sanguin, :type_contact, :horaire_contact)');
+                $req->execute(array(
+                    'nom_donneur' => $_POST['nom_donneur'],
+                    'password' => sha1($_POST['password']),
+                    'ville' => $_POST['ville'],
+                    'numero_mobile' => $_POST['numero_mobile'],
+                    'groupe_sanguin' => $_POST['groupe_sanguin'],
+                    'type_contact' => $_POST['type_contact'],
+                    'horaire_contact' => $_POST['horaire_contact']));
+
+                header('Location:index.php');
         }
         else
         {
-            echo "existe";
+           echo "Inscription impossible car le numero ".$_POST['numero_mobile']. "est déjà utilisé";
         }
-
-    /*if(!VerifierNumero($_POST['numero_mobile'])){
-        $req = $bdd->prepare('INSERT INTO users(nom_donneur, password, ville, numero_mobile, groupe_sanguin, type_contact, horaire_contact)
-                      VALUES(:nom_donneur, :password, :ville, :numero_mobile, :groupe_sanguin, :type_contact, :horaire_contact)');
-        $req->execute(array(
-            'nom_donneur' => $_POST['nom_donneur'],
-            'password' => sha1($_POST['password']),
-            'ville' => $_POST['ville'],
-            'numero_mobile' => $_POST['numero_mobile'],
-            'groupe_sanguin' => $_POST['groupe_sanguin'],
-            'type_contact' => $_POST['type_contact'],
-            'horaire_contact' => $_POST['horaire_contact']));
-
-        header('Location:index.php');
-     }else{
-        echo "inscription impossible car numero déja utilisé !!";
-    }*/
 

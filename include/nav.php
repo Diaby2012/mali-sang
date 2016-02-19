@@ -38,24 +38,33 @@
                 <li class="hidden">
                     <a href="#page-top"></a>
                 </li>
-                <li class="page-scroll">
-                    <a href="#inscription">Inscription</a>
-                </li>
                 <?php
-                  if(isset($_SESSION['nom'])){
+                if (isset($_SESSION['numero_mobile']))
+                {
                 ?>
                 <li class="page-scroll">
-                    <a href="commentaire.php">Commentaire</a>
+                        <a href="forum.php">Forum</a>
                 </li>
+                    <button type="button" class="btn btn-default" aria-label="Align center">
+                        <a href="logout.php"><span class="glyphicon glyphicon-off" aria-hidden="true"></span></a>
+                    </button>
                 <?php
                 }
-                 ?>
+                else
+                {
+                ?>
                 <li class="page-scroll">
-                    <a href="#contact">Contact</a>
+                   <a href="#inscription">Inscription</a>
                 </li>
                 <button type="button" class="btn btn-default" aria-label="Align center">
                     <a href="login.php"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
                 </button>
+                <?php
+                }
+                ?>
+                <li class="page-scroll">
+                    <a href="#contact">Contact</a>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

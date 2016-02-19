@@ -1,11 +1,14 @@
-<?php include_once ("include/nav.php")?>
+<?php
+session_start();
+include_once ("include/nav.php");
+?>
     <!-- Header -->
     <header>
         <div class="container">
            <div class="row">
                 <h4>Trouver un Donneur</h4>
                 <hr>
-                <form class="row" method="GET" action="recherche.php">
+                <form class="row" method="POST" action="recherche.php">
                     <div class="col-lg-5 form-group">
                         <label>Ville</label>
                         <select class="form-control" name="ville">

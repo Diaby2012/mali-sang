@@ -5,7 +5,7 @@ include_once ("include/connexion.php");
 
 $req = $bdd->prepare('SELECT nom_donneur, numero_mobile, type_contact, horaire_contact FROM users
                   WHERE  ville = ? AND groupe_sanguin = ? ');
-$req->execute(array($_GET['ville'],$_GET['groupe_sanguin']));
+$req->execute(array($_POST['ville'],$_POST['groupe_sanguin']));
 ?>
 
 <header>
@@ -13,7 +13,7 @@ $req->execute(array($_GET['ville'],$_GET['groupe_sanguin']));
      <div class="row">
         <div class="col-lg-8">
             <table class="table table-striped">
-                <caption>Resultat de la recherche Groupe :<?php $_GET['groupe_sanguin']?> et Ville:<?php $_GET['ville']?></caption>
+                <caption>Resultat de la recherche Groupe :<strong><?php echo $_POST['groupe_sanguin'];?></strong> et Ville: <strong><?php echo $_POST['ville'];?></strong></caption>
                 <tr>
                     <td>Nom</td>
                     <td>Ville</td>
@@ -25,7 +25,7 @@ $req->execute(array($_GET['ville'],$_GET['groupe_sanguin']));
                     {
                     ?>  <tr>
                         <td><?php echo $donnees['nom_donneur']; ?></td>
-                        <td><?php echo $_GET['ville']; ?></td>
+                        <td><?php echo $_POST['ville']; ?></td>
                         <td><?php echo $donnees['numero_mobile']; ?></td>
                         <td><?php echo $donnees['type_contact']; ?></td>
                         <td><?php echo $donnees['horaire_contact']; ?></td>
