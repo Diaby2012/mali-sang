@@ -1,80 +1,8 @@
 <?php
 session_start();
 include_once ("include/nav.php");
+include_once ("include/header.php");
 ?>
-    <!-- Header -->
-    <header>
-        <div class="container">
-           <div class="row">
-                <h4>Trouver un Donneur</h4>
-                <hr>
-                <form class="row" method="POST" action="recherche.php">
-                    <div class="col-lg-5 form-group">
-                        <label>Ville</label>
-                        <select class="form-control" name="ville">
-                            <option>bamako</option>
-                            <option>Sikasso</option>
-                            <option>Mopti</option>
-                            <option>Koutiala</option>
-                            <option>Kayes</option>
-                            <option>Ségou</option>
-                            <option>Nioro du Sahel</option>
-                            <option>Gao</option>
-                            <option>Tombouctou</option>
-                            <option>Kati</option>
-                            <option>ménaka</option>
-                            <option>Niono</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-5 form-group">
-                        <label>Groupe Sanguin</label>
-                        <select class="form-control" name="groupe_sanguin">
-                            <option>O-</option>
-                            <option>O+</option>
-                            <option>B-</option>
-                            <option>B+</option>
-                            <option>A-</option>
-                            <option>A+</option>
-                            <option>AB-</option>
-                            <option>AB+</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-2 form-group">
-                        <label>-----</label>
-                        <input type="submit" name="button" value="Rechercher" class="form-control">
-                    </div>
-                </form>
-            </div>
-            <div class="row">
-                    <div class="col-xs-3 col-md-offset-2 col-md-1"><img class="img-responsive" src="img/profile.png" alt="groupe sanguin O-"><h5>O-</h5></div>
-                    <div class="col-xs-3 col-md-1"><img class="img-responsive" src="img/profile.png" alt="groupe sanguin O+"><h5>O+</h5></div>
-                    <div class="col-xs-3 col-md-1"><img class="img-responsive" src="img/profile.png" alt="groupe sanguin B-"><h5>B-</h5></div>
-                    <div class="col-xs-3 col-md-1"><img class="img-responsive" src="img/profile.png" alt="groupe sanguin B+"><h5>B+</h5></div>
-                    <div class="col-xs-3 col-md-1"><img class="img-responsive" src="img/profile.png" alt="groupe sanguin A-"><h5>A-</h5></div>
-                    <div class="col-xs-3 col-md-1"><img class="img-responsive" src="img/profile.png" alt="groupe sanguin A+"><h5>A+</h5></div>
-                    <div class="col-xs-3 col-md-1"><img class="img-responsive" src="img/profile.png" alt="groupe sanguin AB+"><h5>AB+</h5></div>
-                    <div class="col-xs-3 col-md-1"><img class="img-responsive" src="img/profile.png" alt="groupe sanguin AB+"><h5>AB-</h5></div>
-                    <div class="col-xs-12 col-md-offset-2"></div>
-            </div>
-            <div class="row">
-                    <div class="col-lg-4">
-                        <img class="img-circle" src="img/donneur.png" alt="image donneur de sang" width="120" height="120">
-                        <h5>Donneur</h5>
-                        <h2>A+</h2>
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-lg-4">
-                        <img class="img-circle" src="img/donneur.png" alt="image donneur de sang" width="120" height="120">
-                        <h5>Donneur</h5>
-                        <h2>o-</h2>
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-lg-4">
-                        <img class="img-circle" src="img/donneur.png" alt="image donneur de sang" width="120" height="120">
-                        <h5>Donneur</h5>
-                        <h2>AB+</h2>
-                    </div><!-- /.col-lg-4 -->
-            </div>
-    </header>
-
     <!-- inscription Grid Section -->
     <section id="inscription">
         <div class="container">
@@ -92,7 +20,7 @@ include_once ("include/nav.php");
                                 <span id="confirmMessage" class="confirmMessage"></span>
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" name="repeat_password" id="repeat_password" onkeyup="checkPass(); return false;" placeholder="Répéter mot de passe">
+                                <input type="password" class="form-control" name="repeat_password" id="repeat_password" onkeyup="checkPass(); return false; " placeholder="Répéter mot de passe">
                             </div>
                             <div class="form-group">
                                 <select class="form-control" name="ville">

@@ -48,3 +48,5 @@ function checkNumero()
         message.innerHTML = "Numéro doit comporté 8 chiffres";
     }
 }
+
+

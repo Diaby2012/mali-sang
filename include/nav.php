@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="img/ms.ico" />
+    <meta name="description" content="site donneur de sang du mali, hôpital Gabriel Touré">
+    <meta name="author" content="mali sang">
+    <META NAME="keywords" CONTENT="don de sang, sang, mali, transfusion sanguin, groupe saguin, groupe A-,A+,B-,B+, AB-, AB, O-, O+, Hôpital gabriel touré, ministère de la santé du mali ">
+    <link rel="icon" href="img/favicon.ico" />
     <title>Mali-Sang</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -19,6 +20,14 @@
     <script type="text/javascript" src="js/general.js"></script>
 </head>
 <body id="page-top" class="index">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.5";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -44,6 +53,9 @@
                 ?>
                 <li class="page-scroll">
                         <a href="forum.php">Forum</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="profil.php">Profil</a>
                 </li>
                     <button type="button" class="btn btn-default" aria-label="Align center">
                         <a href="logout.php"><span class="glyphicon glyphicon-off" aria-hidden="true"></span></a>

@@ -15,7 +15,7 @@
                 $donnees = $req->fetch();
                 if($donnees[0] == 0)
                 {
-                    echo "existe pas";
+                    header ('location: login.php');
                 }else{
                     $_SESSION['numero_mobile'] = $donnees['numero_mobile'];
                     header ('location: index.php');
