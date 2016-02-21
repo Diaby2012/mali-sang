@@ -6,11 +6,12 @@
            </div>
             <h2>Trouver un Donneur au MaLi</h2>
            <div class="row">
-                <form class="row" method="POST" action="recherche.php">
+                <form class="row" method="POST" action="recherche.php" name="formulaire" onsubmit="return valider ();">
                     <div class="col-lg-offset-1 col-lg-4 form-group">
-                        <select class="form-control" name="ville">
+                        <span id="ConfirRecherche" class="ConfirRecherche"></span>
+                        <select class="form-control " name="ville" id="ville">
                             <!--<option>Choisir la Ville</option>-->
-                            <option selected="true" style="display:none;">Choisir une Ville</option>
+                            <option selected="true" style="display:none;";>Choisir une ville</option>
                             <option>bamako</option>
                             <option>Sikasso</option>
                             <option>Mopti</option>
@@ -26,6 +27,7 @@
                         </select>
                     </div>
                     <div class="col-lg-4 form-group">
+                        <span id="ConfirRecherche1" class="ConfirRecherche1"></span>
                         <select class="form-control" name="groupe_sanguin">
                             <option selected="true" style="display:none;">Choisir un groupe sanguin</option>
                             <option>O-</option>
@@ -39,7 +41,7 @@
                         </select>
                     </div>
                     <div class="col-lg-2 form-group">
-                        <input type="submit" name="button" value="Rechercher" class="form-control">
+                    <input type="submit" name="button" value="Rechercher" class="form-control">
                     </div>
                     <div class="col-lg-1"></div>
                 </form>

@@ -10,20 +10,22 @@ include_once ("include/header.php");
                 <div class="col-lg-12 text-center">
                     <h4>Inscription d'un nouveau donneur</h4>
                     <div class="row">
-                        <form  method="POST" action="inscription.php" class="col-lg-offset-3 col-lg-6 col-md-offset-3">
+                        <form  method="POST" action="inscription.php" onsubmit="return inscription()" class="col-lg-offset-3 col-lg-6 col-md-offset-3">
                             <div class="form-group">
                                 <span id="confirmNom" class="confirmNom"></span>
-                                <input type="text" class="form-control" name="nom_donneur" id="nom_donneur" onkeyup="checkNom(); return false;" placeholder="Nom donneur">
+                                <input type="text" class="form-control" name="nom_donneur" id="nom_donneur"  placeholder="Nom donneur">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe">
                                 <span id="confirmMessage" class="confirmMessage"></span>
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" name="repeat_password" id="repeat_password" onkeyup="checkPass(); return false; " placeholder="Répéter mot de passe">
+                                <span id="confirmMessage" class="confirmMessage"></span>
+                                <input type="password" class="form-control" name="repeat_password" id="repeat_password" placeholder="Répéter mot de passe">
                             </div>
                             <div class="form-group">
                                 <select class="form-control" name="ville">
+                                    <option selected="true" style="display:none;">Choisir une Ville</option>
                                     <option>bamako</option>
                                     <option>Sikasso</option>
                                     <option>Mopti</option>
@@ -40,11 +42,11 @@ include_once ("include/header.php");
                             </div>
                             <div class="form-group">
                                 <span id="confirmNumero" class="confirmNumero"></span>
-                                <input type="text" class="form-control" name="numero_mobile" id="numero_mobile" onkeyup="checkNumero(); return false;" placeholder="Numéro Mobile">
+                                <input type="text" class="form-control" name="numero_mobile" id="numero_mobile"  placeholder="Numéro Mobile">
                             </div>
                             <div class="form-group">
-                                <label for="groupe_sanguin">Groupe sanguin</label>
                                 <select class="form-control" name="groupe_sanguin">
+                                    <option selected="true" style="display:none;">Groupe sanguin</option>
                                     <option>O-</option>
                                     <option>O+</option>
                                     <option>B-</option>
@@ -56,16 +58,16 @@ include_once ("include/header.php");
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="groupe_sanguin">Type de contact</label>
                                 <select class="form-control" name="type_contact">
+                                    <option selected="true" style="display:none;">Type de contact</option>
                                     <option>SMS</option>
                                     <option>Apppel</option>
                                     <option>SMS-Appel</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="groupe_sanguin">Horaire de Contact</label>
                                 <select class="form-control" name="horaire_contact">
+                                    <option selected="true" style="display:none;">Horaire de Contact</option>
                                     <option>24/24</option>
                                     <option>Entre 8h et 18h</option>
                                     <option>Entre 19h et 23h</option>
@@ -79,60 +81,7 @@ include_once ("include/header.php");
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h3>Contact Moi</h3>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Nom</label>
-                                <input type="text" class="form-control" placeholder="Nom" id="name" required data-validation-required-message="Veuillez saisir notre nom.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Email</label>
-                                <input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Veuillez saisir notre mail.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Numéro mobile</label>
-                                <input type="tel" class="form-control" placeholder="Numéro" id="phone" required data-validation-required-message="Veuillez saisir notre numéro mobile.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Message</label>
-                                <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Veuillez saisir notre message."></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <br>
-                        <div id="success"></div>
-                        <div class="row">
-                            <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg">Envoyer</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <?php include ("include/footer.php")?>
+    <!-- Contact -->
+<?php
+include_once ("include/contact.php");
+include_once ("include/footer.php");

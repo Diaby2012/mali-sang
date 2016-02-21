@@ -23,6 +23,6 @@ include_once('include/connexion.php');
         }
         else
         {
-           echo "Inscription impossible car le numero ".$_POST['numero_mobile']. "est déjà utilisé";
+           echo "Inscription impossible car le numero ".htmlspecialchars($_POST['numero_mobile']). "est déjà utilisé";
         }
 
