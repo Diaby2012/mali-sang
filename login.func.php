@@ -7,7 +7,7 @@
     {
         if(!empty($_POST['numero_mobile']) && !empty($_POST['password']))
         {
-            if(isset($_POST['numero_mobile']))
+            if(isset($_POST['numero_mobile'], $_POST['password']))
             {
                 $password = sha1($_POST['password']);
                 $req = $bdd->prepare('SELECT numero_mobile FROM users WHERE  numero_mobile = ? AND password = ? ');

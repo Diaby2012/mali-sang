@@ -10,7 +10,7 @@ include_once ("include/header.php");
                 <div class="col-lg-12 text-center">
                     <h4>Inscription d'un nouveau donneur</h4>
                     <div class="row">
-                        <form  method="POST" action="inscription.php" onsubmit="return inscription()" class="col-lg-offset-3 col-lg-6 col-md-offset-3">
+                        <form  method="POST" action="inscription.php" onsubmit="return inscription();" class="col-lg-offset-3 col-lg-6 col-md-offset-3">
                             <div class="form-group">
                                 <span id="confirmNom" class="confirmNom"></span>
                                 <input type="text" class="form-control" name="nom_donneur" id="nom_donneur"  placeholder="Nom donneur">

@@ -1,4 +1,88 @@
-function checkNom() {
+function inscription(){
+    var nomdonneur = document.getElementById('nom_donneur');
+    var message = document.getElementById('confirmNom');
+    var goodColor = "#66cc66";
+    var badColor = "#ff6666";
+    if (nomdonneur.value.length < 5 || nomdonneur.value == "") {
+        nomdonneur.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "Nom de donneur doit être supérieur à 5 caractères";
+        nomdonneur.focus();
+        return false;
+    }else{
+        nomdonneur.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        nomdonneur.focus();
+        return true;
+    }
+
+    var pass1 = document.getElementById('password');
+    var pass2 = document.getElementById('repeat_password');
+    var message = document.getElementById('confirmMessage');
+    var goodColor = "#66cc66";
+    var badColor = "#ff6666";
+
+    if (pass1.value == "" || pass1.value.length < 8){
+        pass1.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "le mot de passe doit supérieur à 8 caractères";
+        pass1.focus();
+        return false;
+    }else{
+        pass1.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        pass1.focus();
+        return true;
+    }
+
+    if(pass1.value == pass2.value){
+        pass2.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "Mot de passe correct"
+        pass1.focus();
+        return true;
+    }else{
+        pass2.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "Saisir le même de mot de passe!";
+        pass1.focus();
+        return false;
+    }
+
+    var numero = document.getElementById('numero_mobile');
+    var message = document.getElementById('confirmNumero');
+    var goodColor = "#66cc66";
+    var badColor = "#ff6666";
+
+    var chkZ = 1;
+    for(i=0; i<numero.value.length; ++i)
+        if(numero.value.charAt(i) < "0"
+            || numero.value.charAt(i) > "9")
+            chkZ = -1;
+    if(chkZ == -1)
+    {
+        message.innerHTML = "Veuillez saisir des chiffres";
+        numero.focus();
+        return false;
+    }
+
+    if ( numero.value.length == 8)
+    {
+        numero.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "Numéro Correct";
+        numero.focus();
+        return true;
+    }else{
+        numero.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "Numéro doit comporté 8 chiffres";
+        numero.focus();
+        return false;
+    }
+}
+
+/*function checkNom() {
 
     var nomdonneur = document.getElementById('nom_donneur');
     var message = document.getElementById('confirmNom');
@@ -7,7 +91,7 @@ function checkNom() {
     if (nomdonneur.value.length < 5 || nomdonneur.value == "") {
          nomdonneur.style.backgroundColor = badColor;
          message.style.color = badColor;
-         message.innerHTML = "Nom de donneur supérieur à 5 caractères";
+         message.innerHTML = "Nom de donneur doit être supérieur à 5 caractères";
          nomdonneur.focus();
          return false;
          }else{
@@ -16,9 +100,9 @@ function checkNom() {
          nomdonneur.focus();
          return true;
          }
-}
+}*/
 
- function checkPass()
+/* function checkPass()
  {
  var pass1 = document.getElementById('password');
  var pass2 = document.getElementById('repeat_password');
@@ -29,7 +113,7 @@ function checkNom() {
      if (pass1.value == "" || pass1.value.length < 8){
          pass1.style.backgroundColor = badColor;
          message.style.color = badColor;
-         message.innerHTML = "Nom de donneur supérieur à 8 caractères";
+         message.innerHTML = "le mot de passe doit supérieur à 8 caractères";
          pass1.focus();
          return false;
      }else{
@@ -52,9 +136,9 @@ function checkNom() {
      pass1.focus();
      return false;
      }
- }
+ }*/
 
-function checkNumero()
+/*function checkNumero()
 {
     var numero = document.getElementById('numero_mobile');
     var message = document.getElementById('confirmNumero');
@@ -88,18 +172,7 @@ function checkNumero()
         return false;
     }
 
-}
-
-function inscription(){
-    formulaire = document.getElementsByName('form');
-    checkNom();
-    checkPass();
-    checkNumero();
-    formulaire.focus();
-    return true;
-
-}
-
+}*/
 
 function valider(){
         var ville = document.formulaire.ville;

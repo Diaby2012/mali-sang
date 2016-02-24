@@ -6,7 +6,7 @@
            </div>
             <h2>Trouver un Donneur au MaLi</h2>
            <div class="row">
-                <form class="row" method="POST" action="recherche.php" name="formulaire" onsubmit="return valider ();">
+                <form class="row" method="GET" action="recherche.php" name="formulaire" onsubmit="return valider ();">
                     <div class="col-lg-offset-1 col-lg-4 form-group">
                         <span id="ConfirRecherche" class="ConfirRecherche"></span>
                         <select class="form-control " name="ville" id="ville">

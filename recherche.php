@@ -1,19 +1,12 @@
 <?php
-session_start();
-include_once ("include/nav.php");
-include_once ("include/connexion.php");
-
-$req = $bdd->prepare('SELECT nom_donneur, numero_mobile, type_contact, horaire_contact FROM users
-                  WHERE  ville = ? AND groupe_sanguin = ? ');
-$req->execute(array($_POST['ville'],$_POST['groupe_sanguin']));
+include_once ('recherche.func.php');
 ?>
-
 <header>
     <div class="container">
      <div class="row">
         <div class="col-lg-8">
             <table class="table table-striped">
-                <caption>Resultat de la recherche Groupe :<strong><?php echo htmlspecialchars($_POST['groupe_sanguin']);?></strong> et Ville: <strong><?php echo htmlspecialchars($_POST['ville']);?></strong></caption>
+                <caption>Resultat de la recherche Groupe :<strong><?php echo htmlspecialchars($_GET['groupe_sanguin']);?></strong> et Ville: <strong><?php echo htmlspecialchars($_GET['ville']);?></strong></caption>
                 <tr>
                     <td>Nom</td>
                     <td>Ville</td>
@@ -25,7 +18,7 @@ $req->execute(array($_POST['ville'],$_POST['groupe_sanguin']));
                     {
                     ?>  <tr>
                         <td><?php echo htmlspecialchars($donnees['nom_donneur']); ?></td>
-                        <td><?php echo htmlspecialchars($_POST['ville']); ?></td>
+                        <td><?php echo htmlspecialchars($donnees['ville']); ?></td>
                         <td><?php echo htmlspecialchars($donnees['numero_mobile']); ?></td>
                         <td><?php echo htmlspecialchars($donnees['type_contact']); ?></td>
                         <td><?php echo htmlspecialchars($donnees['horaire_contact']); ?></td>
