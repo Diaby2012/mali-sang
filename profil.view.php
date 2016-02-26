@@ -5,7 +5,32 @@ include_once ('include/nav.php');
     <header>
         <div class="container">
             <div class="row">
-                <h2>Bienvenu dans votre espace personel</h2>
+                <table class="table table-striped col-lg-8">
+                    <caption>Mes Informations personnelles</caption>
+                    <tr>
+                        <td>Nom</td>
+                        <td>Ville</td>
+                        <td>Numéro mobile</td>
+                        <td>Type de contact</td>
+                        <td>Horaire de contact</td>
+                        <td>Modifier</td>
+                    </tr>
+                    <?php while($donnees = $req->fetch())
+                    {
+                    ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($donnees['nom_donneur']); ?></td>
+                        <td><?php echo htmlspecialchars($donnees['ville']); ?></td>
+                        <td><?php echo htmlspecialchars($donnees['numero_mobile']); ?></td>
+                        <td><?php echo htmlspecialchars($donnees['groupe_sanguin']); ?></td>
+                        <td><?php echo htmlspecialchars($donnees['type_contact']); ?></td>
+                        <td><?php echo htmlspecialchars($donnees['horaire_contact']); ?></td>
+                        <td><a href="update.php?id="$_SESSION['id']">Modifier</a></td>
+                    </tr>
+                    <?php
+                    }
+                    ?>
+                </table>
             </div>
         </div>
     </header>

@@ -60,3 +60,8 @@ button .btn-default{
     height: 200px;  
     margin-bottom: 0px;
  }
+
+.confirmNom{
+    display: none;
+    color: #d62c1a;
+}

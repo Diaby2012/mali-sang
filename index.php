@@ -73,7 +73,7 @@ include_once ("include/header.php");
                                     <option>Entre 19h et 23h</option>
                                 </select>
                             </div>
-                            <button type="submit" value="Inscription" name="submit" class="btn btn-default">Inscription</button>
+                            <button type="submit" value="Inscription" name="submit" id="inscription" class="btn btn-default">Inscription</button>
                         </form>
                     </div>
                 </div>
