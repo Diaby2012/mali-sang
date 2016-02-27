@@ -28,7 +28,7 @@
                     </div>
                     <div class="col-lg-4 form-group">
                         <span id="ConfirRecherche1" class="ConfirRecherche1"></span>
-                        <select class="form-control" name="groupe_sanguin">
+                        <select class="form-control" name="groupe_sanguin" id="groupe">
                             <option selected="true" style="display:none;">Choisir un groupe sanguin</option>
                             <option>O-</option>
                             <option>O+</option>

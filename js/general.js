@@ -2,19 +2,22 @@
 $(function() {
     $("#inscription").click(function(){
         valid = true;
+        /*vérification du nom de donneur*/
         if ($("#nom_donneur").val() == "" ) {
-            $("#nom_donneur").css("border-color","#d62c1a");
+            $("#nom_donneur").css("border-color","#FF0000");
             $("#nom_donneur").prev(".confirmNom").fadeIn().text("Veuillez saisir un nom supérieur à 5 caractère");
              valid = false;
         }else{
+
             $("#nom_donneur").css("border-color","#04B404");
             $("#nom_donneur").prev(".confirmNom").fadeOut();
         }
+
         return valid;
     });
 });
 
-/* function checkPass()
+ function checkPass()
  {
  var pass1 = document.getElementById('password');
  var pass2 = document.getElementById('repeat_password');
@@ -48,9 +51,9 @@ $(function() {
      pass1.focus();
      return false;
      }
- }*/
+ }
 
-/*function checkNumero()
+function checkNumero()
 {
     var numero = document.getElementById('numero_mobile');
     var message = document.getElementById('confirmNumero');
@@ -84,7 +87,7 @@ $(function() {
         return false;
     }
 
-}*/
+}
 
 function valider(){
         var ville = document.formulaire.ville;
@@ -93,14 +96,14 @@ function valider(){
         var message1 = document.getElementById('ConfirRecherche1');
         var badColor = "#921e12";
     if (ville.value == "Choisir une ville"){
-        message.style.backgroundColor = "#d62c1a";
         message.innerHTML = "Veuillez choisir une ville !";
+        $("#ville").css("border-color","#FF0000");
         valid = false;
         return valid;
     }
     if (groupe.value == "Choisir un groupe sanguin") {
-        message1.style.backgroundColor = "#d62c1a";
         message1.innerHTML = "Veuillez choisir un groupe sanguin !";
+        $("#groupe").css("border-color","#FF0000");
         valid = false;
         return valid;
     }
