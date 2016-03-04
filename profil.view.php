@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once ('include/nav.php');
+include_once ('profil.php');
 ?>
     <header>
         <div class="container">
@@ -13,7 +14,6 @@ include_once ('include/nav.php');
                         <td>Numéro mobile</td>
                         <td>Type de contact</td>
                         <td>Horaire de contact</td>
-                        <td>Modifier</td>
                     </tr>
                     <?php while($donnees = $req->fetch())
                     {
@@ -34,5 +34,5 @@ include_once ('include/nav.php');
             </div>
         </div>
     </header>
-<?php
-include_once ('include/footer.php');
+
+<?php include_once('include/footer.php');
